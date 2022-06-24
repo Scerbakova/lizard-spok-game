@@ -1,0 +1,63 @@
+<div class="row text-center">
+  <app-last-rule></app-last-rule>
+</div>
+<div *ngIf="!message" @cardTrigger class="card__wrapper row mt-3">
+  <div *ngFor="let card of cards" class="card col-xs-12 col-sm-6 col-md-4">
+    <img [src]="card.picture" [alt]="card.title" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{ card.title }}</h5>
+      <p class="card-text">{{ card.explanation }}</p>
+      <button
+        [disabled]="message"
+        (click)="playerChose(card.option)"
+        class="btn btn-light"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-xs-4 col-sm-3 col-md-2">
+      <img class="computer" src="../assets/pc.png" alt="computer" /> score:
+      {{ score.computer }}
+    </div>
+    <div class="col-xs-4 col-sm-3 col-md-2" *ngIf="result">
+      Result: {{ result }}
+    </div>
+    <div class="col-xs-4 col-sm-3 col-md-2">
+      <img class="player" src="../assets/Shaldon.jpg" alt="player" /> score:
+      {{ score.player }}
+    </div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-xs-4 col-sm-3 col-md-2" *ngIf="computerResult">
+      {{ computerResult }}
+    </div>
+
+    <div class="col-xs-4 col-sm-3 col-md-2" *ngIf="message">{{ message }}</div>
+
+    <div class="col-xs-4 col-sm-3 col-md-2" *ngIf="playerResult">
+      {{ playerResult }}
+    </div>
+  </div>
+  <div class="row center">
+    <div class="col-xs-4 col-sm-3 col-md-3">
+      <button
+        class="btn btn-light btn-play"
+        (click)="playAgain()"
+        *ngIf="message"
+      >
+        Play again
+      </button>
+      <button
+        class="btn btn-light btn-home"
+        [routerLink]="'/game/'"
+        *ngIf="message"
+      >
+       Return home
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.rules {
+  list-style: none;
+}
+
+.btn {
+  position: fixed;
+}
+
+.btn-rules {
+  right: 50%;
+  top: 40%;
+  transform: translate(50%);
+}
+
+.btn-play {
+  right: 50%;
+  bottom: 10%;
+  transform: translate(50%);
+  animation-duration: 0.85s;
+  animation-name: blinking;
+  animation-iteration-count: infinite;
+  padding: 40px;
+  border-radius: 50%;
+  &:hover {
+    animation: none;
+  }
+}
+
+@keyframes blinking {
+  from {
+    box-shadow: 0px 0px 20px 5px white;
+  }
+}

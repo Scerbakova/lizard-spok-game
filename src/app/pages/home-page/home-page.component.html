@@ -1,0 +1,12 @@
+<div class="home-page__container">
+  <button *ngIf="!isVisible" class="btn btn-danger btn-rules" (click)="isVisible = true; playSound()">Wanna see rules?</button>
+  <div>
+    <ul class="rules" *ngIf="isVisible" [@rulesTrigger]="rules.length">
+      <li *ngFor="let rule of rules">
+        <img [src]="rule.picture" [alt]="rule.title"/>
+        <p>{{rule.title}}</p>
+      </li>
+    </ul>
+  </div>
+  <button (click)="stopSound()" [routerLink]="'/game/play'" class="btn btn-play">Play</button>
+</div>

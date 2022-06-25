@@ -32,7 +32,7 @@ const cards: Cards[] = [
   {
     picture: '../../../assets/Lizard.png',
     title: 'Lizard',
-    explanation: 'Lizard poisons Spock',
+    explanation: 'Lizard poisons Spock, Lizard eats Paper',
     option: 'lizard',
   },
 ];

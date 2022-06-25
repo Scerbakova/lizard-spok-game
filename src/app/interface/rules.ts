@@ -20,6 +20,10 @@ const rules: Rules[] = [
     title: 'Lizard poisons Spock',
   },
   {
+    picture: './assets/Lizard_eats_paper.png',
+    title: 'Lizard eats Paper',
+  },
+  {
     picture: './assets/Spock_smashes_scissors.png',
     title: 'Spock smashes Scissors',
   },

@@ -2,7 +2,7 @@
   <app-last-rule></app-last-rule>
 </div>
 <div *ngIf="!message" @cardTrigger class="card__wrapper row mt-3">
-  <div (click)="playerChose(card.option)" *ngFor="let card of cards" class="card col-xs-12 col-sm-6 col-md-4">
+  <div (click)="playerChose(card.option); playSound('../assets/whoosh.wav')" *ngFor="let card of cards" class="card col-xs-12 col-sm-6 col-md-4">
     <img [src]="card.picture" [alt]="card.title" class="card-img-top" />
     <div class="card-body">
       <h5 class="card-title">{{ card.title }}</h5>

@@ -20,7 +20,7 @@ export const cardTrigger = trigger('cardTrigger', [
           })
         ),
       ]),
-      animate(500),
-    ]),
+      animate(500)
+    ],{ optional: true }),
   ]),
 ]);

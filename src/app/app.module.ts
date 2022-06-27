@@ -14,7 +14,7 @@ import { LastRuleComponent } from './components/last-rule/last-rule.component';
     AppComponent,
     HomePageComponent,
     PlayPageComponent,
-    LastRuleComponent
+    LastRuleComponent,
   ],
   imports: [
     BrowserModule,

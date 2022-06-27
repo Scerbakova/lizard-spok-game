@@ -43,15 +43,15 @@
   bottom: 10%;
   transform: translate(50%);
   animation-duration: 0.85s;
-  animation-name: blinking;
+  animation-name: blinking2;
   animation-iteration-count: infinite;
   &:hover {
     animation: none;
   }
 }
 
-@keyframes blinking {
+@keyframes blinking2 {
   from {
-    box-shadow: 0px 0px 20px 5px rgb(168, 15, 15);
+    box-shadow: 0px 0px 20px 5px white;
   }
 }

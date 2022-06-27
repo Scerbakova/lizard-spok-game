@@ -16,6 +16,7 @@ export class PlayPageComponent {
   result: string | undefined;
   score = { player: 0, computer: 0 };
   options: string[] = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+  audio = new Audio();
 
   playerChose(action: string): void {
     this.playerResult = action;
@@ -92,5 +93,11 @@ export class PlayPageComponent {
     this.result = '';
     this.playerResult = '';
     this.computerResult = '';
+  }
+
+  playSound(sound: string): void {
+    this.audio.src = sound;
+    this.audio.load();
+    this.audio.play();
   }
 }
